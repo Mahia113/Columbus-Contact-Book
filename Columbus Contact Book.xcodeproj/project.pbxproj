@@ -16,6 +16,7 @@
 		171520F527A2389A00900EEC /* CCBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F427A2389A00900EEC /* CCBManager.swift */; };
 		171520F727A238B100900EEC /* CCBDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F627A238B100900EEC /* CCBDataPersistence.swift */; };
 		171520F927A238D800900EEC /* CCBDataPersistenceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */; };
+		1764255527A2F1470089C44B /* Contact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1764255327A2F1470089C44B /* Contact.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		171520F427A2389A00900EEC /* CCBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBManager.swift; sourceTree = "<group>"; };
 		171520F627A238B100900EEC /* CCBDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBDataPersistence.swift; sourceTree = "<group>"; };
 		171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBDataPersistenceModels.swift; sourceTree = "<group>"; };
+		1764255427A2F1470089C44B /* Contact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		171520D227A22ECD00900EEC = {
 			isa = PBXGroup;
 			children = (
+				1764255327A2F1470089C44B /* Contact.xcdatamodeld */,
 				171520DD27A22ECD00900EEC /* Columbus Contact Book */,
 				171520DC27A22ECD00900EEC /* Products */,
 			);
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171520F927A238D800900EEC /* CCBDataPersistenceModels.swift in Sources */,
+				1764255527A2F1470089C44B /* Contact.xcdatamodeld in Sources */,
 				171520E327A22ECD00900EEC /* ViewController.swift in Sources */,
 				171520DF27A22ECD00900EEC /* AppDelegate.swift in Sources */,
 				171520F527A2389A00900EEC /* CCBManager.swift in Sources */,
@@ -388,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1764255327A2F1470089C44B /* Contact.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1764255427A2F1470089C44B /* Contact.xcdatamodel */,
+			);
+			currentVersion = 1764255427A2F1470089C44B /* Contact.xcdatamodel */;
+			path = Contact.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 171520D327A22ECD00900EEC /* Project object */;
 }

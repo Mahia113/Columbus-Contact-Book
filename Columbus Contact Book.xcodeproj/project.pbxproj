@@ -13,6 +13,9 @@
 		171520E627A22ECD00900EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171520E427A22ECD00900EEC /* Main.storyboard */; };
 		171520E827A22EDC00900EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 171520E727A22EDC00900EEC /* Assets.xcassets */; };
 		171520EB27A22EDC00900EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171520E927A22EDC00900EEC /* LaunchScreen.storyboard */; };
+		171520F527A2389A00900EEC /* CCBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F427A2389A00900EEC /* CCBManager.swift */; };
+		171520F727A238B100900EEC /* CCBDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F627A238B100900EEC /* CCBDataPersistence.swift */; };
+		171520F927A238D800900EEC /* CCBDataPersistenceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		171520E727A22EDC00900EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		171520EA27A22EDC00900EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		171520EC27A22EDC00900EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		171520F427A2389A00900EEC /* CCBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBManager.swift; sourceTree = "<group>"; };
+		171520F627A238B100900EEC /* CCBDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBDataPersistence.swift; sourceTree = "<group>"; };
+		171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBDataPersistenceModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		171520DD27A22ECD00900EEC /* Columbus Contact Book */ = {
 			isa = PBXGroup;
 			children = (
+				171520F227A237B500900EEC /* CCBManager */,
 				171520DE27A22ECD00900EEC /* AppDelegate.swift */,
 				171520E027A22ECD00900EEC /* SceneDelegate.swift */,
 				171520E227A22ECD00900EEC /* ViewController.swift */,
@@ -65,6 +72,24 @@
 				171520EC27A22EDC00900EEC /* Info.plist */,
 			);
 			path = "Columbus Contact Book";
+			sourceTree = "<group>";
+		};
+		171520F227A237B500900EEC /* CCBManager */ = {
+			isa = PBXGroup;
+			children = (
+				171520F327A237F200900EEC /* CCBDataPersistence */,
+				171520F427A2389A00900EEC /* CCBManager.swift */,
+			);
+			path = CCBManager;
+			sourceTree = "<group>";
+		};
+		171520F327A237F200900EEC /* CCBDataPersistence */ = {
+			isa = PBXGroup;
+			children = (
+				171520F627A238B100900EEC /* CCBDataPersistence.swift */,
+				171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */,
+			);
+			path = CCBDataPersistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171520F927A238D800900EEC /* CCBDataPersistenceModels.swift in Sources */,
 				171520E327A22ECD00900EEC /* ViewController.swift in Sources */,
 				171520DF27A22ECD00900EEC /* AppDelegate.swift in Sources */,
+				171520F527A2389A00900EEC /* CCBManager.swift in Sources */,
+				171520F727A238B100900EEC /* CCBDataPersistence.swift in Sources */,
 				171520E127A22ECD00900EEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

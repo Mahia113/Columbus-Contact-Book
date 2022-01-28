@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		171520DF27A22ECD00900EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520DE27A22ECD00900EEC /* AppDelegate.swift */; };
 		171520E127A22ECD00900EEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520E027A22ECD00900EEC /* SceneDelegate.swift */; };
-		171520E327A22ECD00900EEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520E227A22ECD00900EEC /* ViewController.swift */; };
+		171520E327A22ECD00900EEC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520E227A22ECD00900EEC /* HomeViewController.swift */; };
 		171520E627A22ECD00900EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171520E427A22ECD00900EEC /* Main.storyboard */; };
 		171520E827A22EDC00900EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 171520E727A22EDC00900EEC /* Assets.xcassets */; };
 		171520EB27A22EDC00900EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171520E927A22EDC00900EEC /* LaunchScreen.storyboard */; };
@@ -17,13 +17,14 @@
 		171520F727A238B100900EEC /* CCBDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F627A238B100900EEC /* CCBDataPersistence.swift */; };
 		171520F927A238D800900EEC /* CCBDataPersistenceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */; };
 		1764255527A2F1470089C44B /* Contact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1764255327A2F1470089C44B /* Contact.xcdatamodeld */; };
+		1764255927A45D0A0089C44B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764255827A45D0A0089C44B /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		171520DB27A22ECD00900EEC /* Columbus Contact Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Columbus Contact Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		171520DE27A22ECD00900EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		171520E027A22ECD00900EEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		171520E227A22ECD00900EEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		171520E227A22ECD00900EEC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		171520E527A22ECD00900EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		171520E727A22EDC00900EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		171520EA27A22EDC00900EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		171520F627A238B100900EEC /* CCBDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBDataPersistence.swift; sourceTree = "<group>"; };
 		171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBDataPersistenceModels.swift; sourceTree = "<group>"; };
 		1764255427A2F1470089C44B /* Contact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact.xcdatamodel; sourceTree = "<group>"; };
+		1764255827A45D0A0089C44B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +67,11 @@
 		171520DD27A22ECD00900EEC /* Columbus Contact Book */ = {
 			isa = PBXGroup;
 			children = (
+				1764255727A45B440089C44B /* View */,
+				1764255627A45B3B0089C44B /* Presenter */,
 				171520F227A237B500900EEC /* CCBManager */,
 				171520DE27A22ECD00900EEC /* AppDelegate.swift */,
 				171520E027A22ECD00900EEC /* SceneDelegate.swift */,
-				171520E227A22ECD00900EEC /* ViewController.swift */,
 				171520E427A22ECD00900EEC /* Main.storyboard */,
 				171520E727A22EDC00900EEC /* Assets.xcassets */,
 				171520E927A22EDC00900EEC /* LaunchScreen.storyboard */,
@@ -93,6 +96,22 @@
 				171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */,
 			);
 			path = CCBDataPersistence;
+			sourceTree = "<group>";
+		};
+		1764255627A45B3B0089C44B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1764255827A45D0A0089C44B /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1764255727A45B440089C44B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				171520E227A22ECD00900EEC /* HomeViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +187,12 @@
 			files = (
 				171520F927A238D800900EEC /* CCBDataPersistenceModels.swift in Sources */,
 				1764255527A2F1470089C44B /* Contact.xcdatamodeld in Sources */,
-				171520E327A22ECD00900EEC /* ViewController.swift in Sources */,
+				171520E327A22ECD00900EEC /* HomeViewController.swift in Sources */,
 				171520DF27A22ECD00900EEC /* AppDelegate.swift in Sources */,
 				171520F527A2389A00900EEC /* CCBManager.swift in Sources */,
 				171520F727A238B100900EEC /* CCBDataPersistence.swift in Sources */,
 				171520E127A22ECD00900EEC /* SceneDelegate.swift in Sources */,
+				1764255927A45D0A0089C44B /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

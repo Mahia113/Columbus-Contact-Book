@@ -1,24 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Columbus_Contact_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Columbus Contact Book" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQd-f3-uIl">
+                                <rect key="frame" x="20" y="64" width="305.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oY-f4-1ho">
+                                <rect key="frame" x="20" y="148" width="374" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opciones disponibles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghe-pd-PX1">
+                                        <rect key="frame" x="20" y="20" width="211.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX8-zk-2qN">
+                                        <rect key="frame" x="20" y="75.5" width="334" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ZX4-oV-0fw"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="person" catalog="system" imagePlacement="leading" title="AGREGAR UN CONTACTO" imagePadding="30">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-1N-lI1">
+                                        <rect key="frame" x="20" y="140.5" width="334" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="aTw-X4-rli"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="person.2" catalog="system" imagePlacement="leading" title="VER LISTA DE CONTACTOS" imagePadding="30">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HX8-zk-2qN" firstAttribute="leading" secondItem="1oY-f4-1ho" secondAttribute="leading" constant="20" id="1Bl-lZ-MPH"/>
+                                    <constraint firstAttribute="height" constant="230" id="5v2-qf-hwf"/>
+                                    <constraint firstAttribute="trailing" secondItem="HX8-zk-2qN" secondAttribute="trailing" constant="20" id="H6Z-fx-qRh"/>
+                                    <constraint firstItem="vbh-1N-lI1" firstAttribute="leading" secondItem="1oY-f4-1ho" secondAttribute="leading" constant="20" id="Jx8-5d-QVw"/>
+                                    <constraint firstItem="vbh-1N-lI1" firstAttribute="top" secondItem="HX8-zk-2qN" secondAttribute="bottom" constant="30" id="UIo-eq-REl"/>
+                                    <constraint firstItem="Ghe-pd-PX1" firstAttribute="leading" secondItem="1oY-f4-1ho" secondAttribute="leading" constant="20" id="cbn-ZB-Sy8"/>
+                                    <constraint firstItem="HX8-zk-2qN" firstAttribute="top" secondItem="Ghe-pd-PX1" secondAttribute="bottom" constant="30" id="tNR-YQ-CBf"/>
+                                    <constraint firstAttribute="trailing" secondItem="vbh-1N-lI1" secondAttribute="trailing" constant="20" id="zOz-Kn-BeG"/>
+                                    <constraint firstItem="Ghe-pd-PX1" firstAttribute="top" secondItem="1oY-f4-1ho" secondAttribute="top" constant="20" id="zTd-7N-3wa"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOA-3d-KTl" userLabel="View Weather">
+                                <rect key="frame" x="20" y="638" width="374" height="224"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="PQd-f3-uIl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6I5-qH-ZVk"/>
+                            <constraint firstItem="PQd-f3-uIl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PK1-JV-mhO"/>
+                            <constraint firstItem="PQd-f3-uIl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UMU-Eh-gDk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BOA-3d-KTl" secondAttribute="trailing" constant="20" id="YXa-1j-qZk"/>
+                            <constraint firstItem="1oY-f4-1ho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bdM-9a-e4B"/>
+                            <constraint firstItem="BOA-3d-KTl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fhk-p1-3bf"/>
+                            <constraint firstItem="PQd-f3-uIl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pWC-D2-dPm"/>
+                            <constraint firstItem="BOA-3d-KTl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qyq-bZ-i3E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1oY-f4-1ho" secondAttribute="trailing" constant="20" id="vp0-Ql-BV3"/>
+                            <constraint firstItem="BOA-3d-KTl" firstAttribute="top" secondItem="1oY-f4-1ho" secondAttribute="bottom" constant="260" id="w82-Z4-SFV"/>
+                            <constraint firstItem="1oY-f4-1ho" firstAttribute="top" secondItem="PQd-f3-uIl" secondAttribute="bottom" constant="51.5" id="y2y-Of-Pbe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="viewContainer" destination="1oY-f4-1ho" id="sNI-u5-Rj5"/>
+                        <outlet property="viewWeather" destination="BOA-3d-KTl" id="Ggp-79-zCq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="91.741071428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

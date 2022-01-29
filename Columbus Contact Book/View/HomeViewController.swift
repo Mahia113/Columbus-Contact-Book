@@ -12,6 +12,9 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var viewWeather: UIView!
     
+    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+    
     private let homePresenter: HomePresenter = HomePresenter()
 
     override func viewDidLoad() {
@@ -21,6 +24,16 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
         homePresenter.setViewDelegate(homeViewControllerDelegate: self)
         customViewContainer()
         customViewWeather()
+    }
+    
+    @IBAction func addContactEvent(_ sender: Any) {
+        let addContactViewController = storyBoard.instantiateViewController(withIdentifier: "addContact")
+        addContactViewController.modalPresentationStyle = .fullScreen
+        self.present(addContactViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func showListContactEvent(_ sender: Any) {
+        print("showListContactEvent")
     }
     
     func customViewContainer(){

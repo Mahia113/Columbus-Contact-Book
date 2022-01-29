@@ -18,6 +18,7 @@
 		171520F927A238D800900EEC /* CCBDataPersistenceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */; };
 		1764255527A2F1470089C44B /* Contact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1764255327A2F1470089C44B /* Contact.xcdatamodeld */; };
 		1764255927A45D0A0089C44B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764255827A45D0A0089C44B /* HomePresenter.swift */; };
+		1764255B27A4D6410089C44B /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764255A27A4D6410089C44B /* AddContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		171520F827A238D800900EEC /* CCBDataPersistenceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBDataPersistenceModels.swift; sourceTree = "<group>"; };
 		1764255427A2F1470089C44B /* Contact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact.xcdatamodel; sourceTree = "<group>"; };
 		1764255827A45D0A0089C44B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		1764255A27A4D6410089C44B /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				171520E227A22ECD00900EEC /* HomeViewController.swift */,
+				1764255A27A4D6410089C44B /* AddContactViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				171520F927A238D800900EEC /* CCBDataPersistenceModels.swift in Sources */,
 				1764255527A2F1470089C44B /* Contact.xcdatamodeld in Sources */,
 				171520E327A22ECD00900EEC /* HomeViewController.swift in Sources */,
+				1764255B27A4D6410089C44B /* AddContactViewController.swift in Sources */,
 				171520DF27A22ECD00900EEC /* AppDelegate.swift in Sources */,
 				171520F527A2389A00900EEC /* CCBManager.swift in Sources */,
 				171520F727A238B100900EEC /* CCBDataPersistence.swift in Sources */,

@@ -144,14 +144,17 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="street-address"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Notas para el app" translatesAutoresizingMaskIntoConstraints="NO" id="0zm-js-rr8">
-                                        <rect key="frame" x="30" y="288" width="314" height="128"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notas para el app" translatesAutoresizingMaskIntoConstraints="NO" id="0zm-js-rr8">
+                                        <rect key="frame" x="30" y="286" width="314" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="jjz-xy-ldj"/>
+                                        </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Campo obligatorio: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFm-OK-DJU">
-                                        <rect key="frame" x="30" y="449" width="314" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFm-OK-DJU">
+                                        <rect key="frame" x="30" y="446" width="314" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -160,6 +163,9 @@
                                         <rect key="frame" x="30" y="623" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Agregar"/>
+                                        <connections>
+                                            <action selector="addEvent:" destination="DIO-U2-jv2" eventType="touchUpInside" id="wuu-Gp-9z5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -202,6 +208,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kso-7D-OUv"/>
+                    <connections>
+                        <outlet property="addButton" destination="75q-4M-U8J" id="1lD-MJ-Na3"/>
+                        <outlet property="addressTextField" destination="kT6-pf-LkF" id="AES-pY-Xwr"/>
+                        <outlet property="emailTextField" destination="LEU-Yd-zro" id="5NR-3x-E4M"/>
+                        <outlet property="helperLabel" destination="RFm-OK-DJU" id="BeO-FV-ziJ"/>
+                        <outlet property="nameTextField" destination="pij-Gu-uAM" id="dm1-eE-rmt"/>
+                        <outlet property="notesTesxtView" destination="0zm-js-rr8" id="lyd-LV-Ghg"/>
+                        <outlet property="phoneTextField" destination="QUX-8H-DRg" id="p8l-SV-uEI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3z-rH-Sa8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

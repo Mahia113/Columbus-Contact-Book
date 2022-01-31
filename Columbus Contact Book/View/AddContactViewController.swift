@@ -30,8 +30,14 @@ class AddContactViewController: UIViewController, AddContactViewDelegate {
     
     @IBAction func addEvent(_ sender: Any) {
         
+        let name = nameTextField.text
+        let email = emailTextField.text
+        let phone = phoneTextField.text
+        let address = addressTextField.text
+        let notes = notesTesxtView.text
+        
         if validatorTextFiled() {
-            addContactPresenter.saveContact(name: "", email: "", phone: "", address: "", notes: "")
+            addContactPresenter.saveContact(name: name!, email: email!, phone: phone!, address: address!, notes: notes!)
         }
 
     }

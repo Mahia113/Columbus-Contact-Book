@@ -199,13 +199,46 @@
         <!--Contact Detail View Controller-->
         <scene sceneID="iC6-pU-abL">
             <objects>
-                <viewController id="vWF-t7-kGt" customClass="ContactDetailViewController" customModule="Columbus_Contact_Book" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contactDetail" modalPresentationStyle="overCurrentContext" id="vWF-t7-kGt" customClass="ContactDetailViewController" customModule="Columbus_Contact_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aSZ-Sy-E7e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpC-im-29t">
+                                <rect key="frame" x="0.0" y="44" width="78" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="Back" imagePadding="10"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fa-dO-BLZ">
+                                <rect key="frame" x="20" y="125" width="374" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Rsq-o7-AHv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrG-Fo-1vf">
+                                <rect key="frame" x="20" y="455" width="374" height="387"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YGF-Hp-ioZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="OrG-Fo-1vf" firstAttribute="top" secondItem="3fa-dO-BLZ" secondAttribute="bottom" constant="30" id="6nw-KG-29I"/>
+                            <constraint firstItem="YGF-Hp-ioZ" firstAttribute="trailing" secondItem="OrG-Fo-1vf" secondAttribute="trailing" constant="20" id="7gy-el-TCM"/>
+                            <constraint firstItem="3fa-dO-BLZ" firstAttribute="top" secondItem="LpC-im-29t" secondAttribute="bottom" constant="50" id="8Fh-Mu-cPJ"/>
+                            <constraint firstItem="YGF-Hp-ioZ" firstAttribute="bottom" secondItem="OrG-Fo-1vf" secondAttribute="bottom" constant="20" id="8kL-vg-yIG"/>
+                            <constraint firstItem="OrG-Fo-1vf" firstAttribute="leading" secondItem="YGF-Hp-ioZ" secondAttribute="leading" constant="20" id="M5m-jB-ovt"/>
+                            <constraint firstItem="3fa-dO-BLZ" firstAttribute="leading" secondItem="YGF-Hp-ioZ" secondAttribute="leading" constant="20" id="SVf-B0-Rh3"/>
+                            <constraint firstItem="LpC-im-29t" firstAttribute="top" secondItem="YGF-Hp-ioZ" secondAttribute="top" id="TZo-Hh-PUj"/>
+                            <constraint firstItem="YGF-Hp-ioZ" firstAttribute="trailing" secondItem="3fa-dO-BLZ" secondAttribute="trailing" constant="20" id="bya-Lm-epO"/>
+                            <constraint firstItem="LpC-im-29t" firstAttribute="leading" secondItem="YGF-Hp-ioZ" secondAttribute="leading" id="v9o-nr-LmE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="viewContainerBottom" destination="OrG-Fo-1vf" id="S2Y-Kj-8Kz"/>
+                        <outlet property="viewContainerTop" destination="3fa-dO-BLZ" id="dHZ-9T-Deo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a60-IY-w9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

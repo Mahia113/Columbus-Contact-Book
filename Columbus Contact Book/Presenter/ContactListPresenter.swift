@@ -22,9 +22,10 @@ class ContactListPresenter {
         self.contactListViewControllerDelegate = contactListViewControllerDelegate
     }
     
-    func goToContactDetails(contact: ContactModel){
-        print("Contact selected: \(contact)")
-        
+    func goToContactDetails(contact: ContactModel, controller: UIViewController){
+        let contactDetailViewController = storyBoard.instantiateViewController(withIdentifier: "contactDetail") as! ContactDetailViewController
+        contactDetailViewController.contact = contact
+        controller.present(contactDetailViewController, animated: true, completion: nil)
     }
     
     func dissmisController(controller: UIViewController){

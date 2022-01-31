@@ -46,18 +46,34 @@ public struct CCBDataPersistence {
         
     }
     
-    public func getContacts() -> [NSManagedObject] {
+    public func getContacts() -> [ContactModel] {
      
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Person")
         var people: [NSManagedObject] = []
-
+        
+        var contactsList: [ContactModel] = []
+        
         do {
-          people = try managedContext.fetch(fetchRequest)
+            
+            people = try managedContext.fetch(fetchRequest)
+            
+            for (index, person) in people.enumerated() {
+                                
+                let contact = ContactModel(
+                    name: person.value(forKey: "name") as! String,
+                    phone: person.value(forKey: "phone") as! String,
+                    email: person.value(forKey: "email") as! String,
+                    address: person.value(forKey: "address") as! String,
+                    notes: person.value(forKey: "notes") as! String)
+                
+                contactsList.append(contact)
+            }
+                        
         } catch let error as NSError {
           print("Could not fetch. \(error), \(error.userInfo)")
         }
         
-        return people
+        return contactsList
     }
     
     public func getContact(email: String) -> NSManagedObject {

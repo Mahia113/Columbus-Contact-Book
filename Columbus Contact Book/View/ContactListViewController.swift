@@ -15,7 +15,6 @@ class ContactListViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("lista de contactos: \(listContacts)")
     }
     
     @IBAction func backEvent(_ sender: Any) {
@@ -23,12 +22,12 @@ class ContactListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        listContacts.count
+        return listContacts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ContactViewCell
-                
+        
         cell.nameLabel.text = listContacts[indexPath.row].name
         cell.phoneLabel.text = listContacts[indexPath.row].phone
         

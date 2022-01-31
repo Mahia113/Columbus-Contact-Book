@@ -34,6 +34,10 @@ class ContactListViewController: UIViewController, UICollectionViewDataSource, U
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        contactListPresenter.goToContactDetails(contact: listContacts[indexPath.row])
+    }
 
 }
 

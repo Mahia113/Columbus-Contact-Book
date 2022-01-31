@@ -22,7 +22,8 @@ class ContactListPresenter {
         self.contactListViewControllerDelegate = contactListViewControllerDelegate
     }
     
-    func goToContactDetails(){
+    func goToContactDetails(contact: ContactModel){
+        print("Contact selected: \(contact)")
         
     }
     

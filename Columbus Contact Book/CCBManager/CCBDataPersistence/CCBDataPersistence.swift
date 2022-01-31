@@ -23,7 +23,7 @@ public struct CCBDataPersistence {
         entity = NSEntityDescription.entity(forEntityName: "Person", in: managedContext)!
     }
         
-    public func addContact(data: Dictionary<String, String>){
+    public func addContact(data: Dictionary<String, String>) -> Bool {
         
         let person = NSManagedObject(entity: entity, insertInto: managedContext)
         
@@ -38,8 +38,10 @@ public struct CCBDataPersistence {
         do {
           try managedContext.save()
             people.append(person)
+            return true
         } catch let error as NSError {
-          print("Could not save. \(error), \(error.userInfo)")
+            print("Could not save. \(error), \(error.userInfo)")
+            return false
         }
         
     }

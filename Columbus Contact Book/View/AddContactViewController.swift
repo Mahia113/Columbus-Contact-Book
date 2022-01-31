@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddContactViewController: UIViewController {
+class AddContactViewController: UIViewController, AddContactViewDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -18,32 +18,34 @@ class AddContactViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
+    private let addContactPresenter: AddContactPresenter = AddContactPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         customNotesTextView()
+        addContactPresenter.setViewDelegate(addContactViewDelegate: self)
+    }
+    
+    @IBAction func addEvent(_ sender: Any) {
         
+        if validatorTextFiled() {
+            addContactPresenter.saveContact(name: "", email: "", phone: "", address: "", notes: "")
+        }
+
+    }
+    
+    @IBAction func backEvent(_ sender: Any) {
+        addContactPresenter.dissmisController(controller: self)
+    }
+    
+    func contactSaved(saved: Bool) {
+        addContactPresenter.dissmisController(controller: self)
     }
     
     func customNotesTextView(){
         notesTesxtView.layer.borderColor = UIColor.systemGray6.cgColor;
         notesTesxtView.layer.borderWidth = 1.0;
         notesTesxtView.layer.cornerRadius = 5.0;
-    }
-    
-    @IBAction func addEvent(_ sender: Any) {
-        
-        if validatorTextFiled() {
-            print("campos obligatorios llenos")
-        } else{
-            print("campos obligatorios no llenos")
-        }
-        
-    }
-    
-    
-    @IBAction func backEvent(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     func validatorTextFiled() -> Bool {

@@ -15,6 +15,7 @@ protocol AddContactViewDelegate: NSObjectProtocol {
 class AddContactPresenter {
     
     weak private var addContactViewDelegate: AddContactViewDelegate?
+    private let ccbManager: CCBManager = CCBManager()
     
     init() {}
     
@@ -22,8 +23,18 @@ class AddContactPresenter {
         self.addContactViewDelegate = addContactViewDelegate
     }
     
-    func saveContact(name: String, email: String, phone: String, address: String, notes: String){
-        print("presenter contact save")
+    func saveContact(name: String, email: String, phone: String, address: String, notes: String){        
+        let dataConctact: Dictionary<String, String> = [
+            "name": name,
+            "phone": phone,
+            "email": email,
+            "address": address,
+            "notes": notes
+        ]
+        
+        let saved = ccbManager.CCBDataPersistence().addContact(data: dataConctact)
+        
+        addContactViewDelegate?.contactSaved(saved: saved)
     }
     
     func dissmisController(controller: UIViewController){

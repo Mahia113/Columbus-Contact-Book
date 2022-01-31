@@ -7,18 +7,19 @@
 
 import UIKit
 
-class ContactListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ContactListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ContactListViewControllerDelegate {
     
     private let reuseIdentifier = "contactListCell"
-        
     var listContacts: [ContactModel] = []
+    private let contactListPresenter = ContactListPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        contactListPresenter.setViewDelegate(contactListViewControllerDelegate: self)
     }
     
     @IBAction func backEvent(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        contactListPresenter.dissmisController(controller: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

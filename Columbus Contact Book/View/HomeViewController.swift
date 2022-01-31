@@ -28,7 +28,6 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
     }
     
     @IBAction func showListContactEvent(_ sender: Any) {
-        print("showListContactEvent")
         homePresenter.goToGetContacts(controller: self)
     }
     

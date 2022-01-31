@@ -5,7 +5,6 @@
 //  Created by Mahia113
 //
 
-import Foundation
 import UIKit
 
 protocol HomeViewControllerDelegate: NSObjectProtocol {
@@ -16,6 +15,7 @@ class HomePresenter {
     
     weak private var homeViewControllerDelegate: HomeViewControllerDelegate?
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private let ccbManager: CCBManager = CCBManager()
     
     init() {}
     
@@ -30,9 +30,13 @@ class HomePresenter {
     }
     
     func goToGetContacts(controller: UIViewController) {
-        let addContactViewController = storyBoard.instantiateViewController(withIdentifier: "contactListView")
-        //addContactViewController.modalPresentationStyle = .fullScreen
-        controller.present(addContactViewController, animated: true, completion: nil)
+        let contactListViewController = storyBoard.instantiateViewController(withIdentifier: "contactListView") as! ContactListViewController
+        
+        let listContacts = ccbManager.CCBDataPersistence().getContacts()
+        
+        contactListViewController.listContacts = listContacts
+
+        controller.present(contactListViewController, animated: true, completion: nil)
     }
     
 }

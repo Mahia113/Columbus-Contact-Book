@@ -17,12 +17,14 @@ class AddContactViewController: UIViewController, AddContactViewDelegate {
     @IBOutlet weak var helperLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var vieContainer: UIView!
     
     private let addContactPresenter: AddContactPresenter = AddContactPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customNotesTextView()
+        customViewContainer()
         addContactPresenter.setViewDelegate(addContactViewDelegate: self)
     }
     
@@ -46,6 +48,15 @@ class AddContactViewController: UIViewController, AddContactViewDelegate {
         notesTesxtView.layer.borderColor = UIColor.systemGray6.cgColor;
         notesTesxtView.layer.borderWidth = 1.0;
         notesTesxtView.layer.cornerRadius = 5.0;
+    }
+    
+    func customViewContainer(){
+        vieContainer.layer.backgroundColor = UIColor.white.cgColor
+        vieContainer.layer.cornerRadius = 20
+        vieContainer.layer.shadowColor = UIColor.black.cgColor
+        vieContainer.layer.shadowOffset = CGSize(width: 3, height: 3)
+        vieContainer.layer.shadowOpacity = 0.7
+        vieContainer.layer.shadowRadius = 4.0
     }
     
     func validatorTextFiled() -> Bool {

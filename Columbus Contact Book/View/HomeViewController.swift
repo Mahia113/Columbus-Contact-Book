@@ -11,9 +11,7 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
     
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var viewWeather: UIView!
-    
-    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    
+        
     private let homePresenter: HomePresenter = HomePresenter()
 
     override func viewDidLoad() {
@@ -31,6 +29,7 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
     
     @IBAction func showListContactEvent(_ sender: Any) {
         print("showListContactEvent")
+        homePresenter.goToGetContacts(controller: self)
     }
     
     func customViewContainer(){

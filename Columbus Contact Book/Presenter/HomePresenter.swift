@@ -29,8 +29,10 @@ class HomePresenter {
         controller.present(addContactViewController, animated: true, completion: nil)
     }
     
-    func goToGetContacts() {
-        
+    func goToGetContacts(controller: UIViewController) {
+        let addContactViewController = storyBoard.instantiateViewController(withIdentifier: "contactListView")
+        //addContactViewController.modalPresentationStyle = .fullScreen
+        controller.present(addContactViewController, animated: true, completion: nil)
     }
     
 }

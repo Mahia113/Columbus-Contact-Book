@@ -20,6 +20,7 @@
 		1764255927A45D0A0089C44B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764255827A45D0A0089C44B /* HomePresenter.swift */; };
 		1764255B27A4D6410089C44B /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764255A27A4D6410089C44B /* AddContactViewController.swift */; };
 		17E05FD027A76CF500E264D6 /* AddContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E05FCF27A76CF500E264D6 /* AddContactPresenter.swift */; };
+		17E05FD227A785E800E264D6 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E05FD127A785E800E264D6 /* ContactListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1764255827A45D0A0089C44B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		1764255A27A4D6410089C44B /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		17E05FCF27A76CF500E264D6 /* AddContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactPresenter.swift; sourceTree = "<group>"; };
+		17E05FD127A785E800E264D6 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				171520E227A22ECD00900EEC /* HomeViewController.swift */,
 				1764255A27A4D6410089C44B /* AddContactViewController.swift */,
+				17E05FD127A785E800E264D6 /* ContactListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				171520F727A238B100900EEC /* CCBDataPersistence.swift in Sources */,
 				171520E127A22ECD00900EEC /* SceneDelegate.swift in Sources */,
 				1764255927A45D0A0089C44B /* HomePresenter.swift in Sources */,
+				17E05FD227A785E800E264D6 /* ContactListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

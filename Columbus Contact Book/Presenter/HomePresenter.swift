@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeViewControllerDelegate: NSObjectProtocol {
     func displayWheaterData(description:(String))
@@ -14,6 +15,7 @@ protocol HomeViewControllerDelegate: NSObjectProtocol {
 class HomePresenter {
     
     weak private var homeViewControllerDelegate: HomeViewControllerDelegate?
+    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     init() {}
     
@@ -21,8 +23,10 @@ class HomePresenter {
         self.homeViewControllerDelegate = homeViewControllerDelegate
     }
     
-    func goToAddContact() {
-        
+    func goToAddContact(controller: UIViewController) {
+        let addContactViewController = storyBoard.instantiateViewController(withIdentifier: "addContact")
+        addContactViewController.modalPresentationStyle = .fullScreen
+        controller.present(addContactViewController, animated: true, completion: nil)
     }
     
     func goToGetContacts() {

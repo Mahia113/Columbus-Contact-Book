@@ -13,7 +13,6 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
     @IBOutlet weak var viewWeather: UIView!
     
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-
     
     private let homePresenter: HomePresenter = HomePresenter()
 
@@ -27,9 +26,7 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
     }
     
     @IBAction func addContactEvent(_ sender: Any) {
-        let addContactViewController = storyBoard.instantiateViewController(withIdentifier: "addContact")
-        addContactViewController.modalPresentationStyle = .fullScreen
-        self.present(addContactViewController, animated: true, completion: nil)
+        homePresenter.goToAddContact(controller: self)
     }
     
     @IBAction func showListContactEvent(_ sender: Any) {

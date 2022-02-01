@@ -126,7 +126,7 @@ public struct CCBDataPersistence {
         return person
     }
     
-    public func deleteContact(email: String){
+    public func deleteContact(email: String) -> Bool {
         var person: NSManagedObject = NSManagedObject()
         
         print("email a eliminar: \(email)")
@@ -142,12 +142,15 @@ public struct CCBDataPersistence {
             
             do {
                 try managedContext.save()
+                return true
             } catch let error as NSError {
                 print("Could not save. \(error), \(error.userInfo)")
+                return false
             }
 
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
+            return false
         }
     }
     

@@ -50,7 +50,7 @@ class ContactDetailViewController: UIViewController, ContactDetailViewController
     }
     
     func contactEliminated(eliminated: Bool) {
-        
+        //self.dismiss(animated: true, completion: nil)
     }
     
     func setValues(){

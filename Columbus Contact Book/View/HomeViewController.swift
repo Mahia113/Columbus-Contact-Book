@@ -11,16 +11,21 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
     
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var viewWeather: UIView!
-        
+    
+    @IBOutlet weak var temlLabel: UILabel!
+    @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var direcctionLabel: UILabel!
+    @IBOutlet weak var transparencyLabel: UILabel!
+    @IBOutlet weak var indexLabel: UILabel!
+    
     private let homePresenter: HomePresenter = HomePresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         homePresenter.setViewDelegate(homeViewControllerDelegate: self)
         customViewContainer()
         customViewWeather()
+        getWeatherData()
     }
     
     @IBAction func addContactEvent(_ sender: Any) {
@@ -49,8 +54,35 @@ class HomeViewController: UIViewController, HomeViewControllerDelegate {
         viewWeather.layer.shadowRadius = 4.0
     }
     
-    func displayWheaterData(description: (String)) {
-
+    func getWeatherData(){
+        homePresenter.getWeatherDataFromApi()
     }
+    
+    func displayWheaterData(data: DataseriesModel) {
+        DispatchQueue.main.async {
+            self.temlLabel.text = String(data.temp2m)
+            self.speedLabel.text = String(data.wind10m.speed)
+            self.direcctionLabel.text = data.wind10m.direction
+            self.transparencyLabel.text = String(data.transparency)
+            self.indexLabel.text = String(data.lifted_index)
+        }
+        
+    }
+    
+    func errorFetchingWeatherData(error: Error) {        
+        DispatchQueue.main.async {
+            self.alert(message: "Ocurrio un error al obtener los datos del clima. Razón: \(error)", title: "Lo sentimos")
+        }
+    }
+    
+}
+
+extension UIViewController {
+  func alert(message: String, title: String = "") {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let OKAction = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+    alertController.addAction(OKAction)
+    self.present(alertController, animated: true, completion: nil)
+  }
 }
 

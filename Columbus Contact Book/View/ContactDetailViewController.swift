@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactDetailViewController: UIViewController {
+class ContactDetailViewController: UIViewController, ContactDetailViewControllerDelegate {
     
     @IBOutlet weak var viewContainerTop: UIView!
     @IBOutlet weak var viewContainerBottom: UIView!
@@ -23,15 +23,18 @@ class ContactDetailViewController: UIViewController {
     
     var contact: ContactModel?
     
+    private let contactDetailPresenter: ContactDetailPresenter = ContactDetailPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customContainerTop()
         customContainerBottom()
         setValues()
+        contactDetailPresenter.setViewDelegate(contactDetailViewControllerDelegate: self)
     }
     
     @IBAction func backEvent(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        contactDetailPresenter.dismissController(controller: self)
     }
     
     @IBAction func callEvent(_ sender: Any) {
@@ -43,6 +46,10 @@ class ContactDetailViewController: UIViewController {
     }
     
     @IBAction func deleteEvent(_ sender: Any) {
+        
+    }
+    
+    func contactEliminated(eliminated: Bool) {
         
     }
     

@@ -97,9 +97,7 @@ public struct CCBDataPersistence {
     public func updateContact(email: String, data: ContactModel) -> Bool {
         
         var person: NSManagedObject = NSManagedObject()
-        
-        print("email a actualizar: \(email)")
-        
+                
         let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Person")
         fetchRequest.predicate = NSPredicate(format: "email = %@", email)
         
@@ -129,9 +127,7 @@ public struct CCBDataPersistence {
     
     public func deleteContact(email: String) -> Bool {
         var person: NSManagedObject = NSManagedObject()
-        
-        print("email a eliminar: \(email)")
-        
+                
         let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Person")
         fetchRequest.predicate = NSPredicate(format: "email = %@", email)
         

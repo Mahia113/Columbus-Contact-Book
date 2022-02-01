@@ -42,7 +42,7 @@ class ContactDetailViewController: UIViewController, ContactDetailViewController
     }
     
     @IBAction func editEvent(_ sender: Any) {
-        
+        contactDetailPresenter.goToEditContact(controller: self, contact: contact!)
     }
     
     @IBAction func deleteEvent(_ sender: Any) {

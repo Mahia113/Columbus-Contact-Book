@@ -14,7 +14,7 @@ protocol ContactDetailViewControllerDelegate: NSObjectProtocol {
 class ContactDetailPresenter {
     
     weak private var contactDetailViewControllerDelegate: ContactDetailViewController?
-    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let ccbManager: CCBManager = CCBManager()
 
     init() {}
@@ -28,7 +28,9 @@ class ContactDetailPresenter {
     }
     
     func goToEditContact(controller: UIViewController, contact: ContactModel){
-        
+        let editContactViewController = storyBoard.instantiateViewController(withIdentifier: "editContact") as! EditContactViewController
+        editContactViewController.contact = contact
+        controller.present(editContactViewController, animated: true, completion: nil)
     }
     
     func deleteContact(contact: ContactModel){

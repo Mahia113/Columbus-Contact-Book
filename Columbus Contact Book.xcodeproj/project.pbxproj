@@ -19,6 +19,7 @@
 		1764255527A2F1470089C44B /* Contact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1764255327A2F1470089C44B /* Contact.xcdatamodeld */; };
 		1764255927A45D0A0089C44B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764255827A45D0A0089C44B /* HomePresenter.swift */; };
 		1764255B27A4D6410089C44B /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764255A27A4D6410089C44B /* AddContactViewController.swift */; };
+		17BABFC327A8FF7200C14F57 /* EditContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BABFC227A8FF7200C14F57 /* EditContactPresenter.swift */; };
 		17E05FD027A76CF500E264D6 /* AddContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E05FCF27A76CF500E264D6 /* AddContactPresenter.swift */; };
 		17E05FD227A785E800E264D6 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E05FD127A785E800E264D6 /* ContactListViewController.swift */; };
 		17E05FD427A88E3600E264D6 /* ContactListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E05FD327A88E3600E264D6 /* ContactListPresenter.swift */; };
@@ -42,6 +43,7 @@
 		1764255427A2F1470089C44B /* Contact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact.xcdatamodel; sourceTree = "<group>"; };
 		1764255827A45D0A0089C44B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		1764255A27A4D6410089C44B /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		17BABFC227A8FF7200C14F57 /* EditContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactPresenter.swift; sourceTree = "<group>"; };
 		17E05FCF27A76CF500E264D6 /* AddContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactPresenter.swift; sourceTree = "<group>"; };
 		17E05FD127A785E800E264D6 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		17E05FD327A88E3600E264D6 /* ContactListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListPresenter.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				17E05FCF27A76CF500E264D6 /* AddContactPresenter.swift */,
 				17E05FD327A88E3600E264D6 /* ContactListPresenter.swift */,
 				17E05FD727A8C85500E264D6 /* ContactDetailPresenter.swift */,
+				17BABFC227A8FF7200C14F57 /* EditContactPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				171520E127A22ECD00900EEC /* SceneDelegate.swift in Sources */,
 				1764255927A45D0A0089C44B /* HomePresenter.swift in Sources */,
 				17E05FD227A785E800E264D6 /* ContactListViewController.swift in Sources */,
+				17BABFC327A8FF7200C14F57 /* EditContactPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

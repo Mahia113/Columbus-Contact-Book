@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Columbus_Contact_Book" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" modalPresentationStyle="overCurrentContext" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Columbus_Contact_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -435,6 +435,9 @@
                                 <rect key="frame" x="0.0" y="44" width="78" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="Back" imagePadding="10"/>
+                                <connections>
+                                    <action selector="backEvent:" destination="DKh-B6-TGr" eventType="touchUpInside" id="KaI-Ij-CaM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar contacto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krg-Wr-czF">
                                 <rect key="frame" x="20" y="95" width="193" height="33"/>
@@ -477,7 +480,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Actualizar"/>
                                         <connections>
-                                            <action selector="addEvent:" destination="DIO-U2-jv2" eventType="touchUpInside" id="g1F-Ce-HGI"/>
+                                            <action selector="updateEvent:" destination="DKh-B6-TGr" eventType="touchUpInside" id="ndo-AS-Phw"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar una nota sobre este contacto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcw-s4-660">
@@ -537,6 +540,14 @@
                             <constraint firstItem="Krg-Wr-czF" firstAttribute="top" secondItem="kgv-IX-E3i" secondAttribute="bottom" constant="20" id="ovi-oE-mkd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressContact" destination="6X2-Iv-818" id="ipF-YA-5tW"/>
+                        <outlet property="emailContact" destination="USN-WB-c7k" id="Vsj-yl-TCl"/>
+                        <outlet property="nameContact" destination="uxy-wx-b1O" id="TR6-f8-fBm"/>
+                        <outlet property="noteContact" destination="Ghz-ao-Vj3" id="1yB-a9-gSY"/>
+                        <outlet property="phoneContact" destination="v2X-wD-AhF" id="s6p-bt-Vf3"/>
+                        <outlet property="viewContainer" destination="H7T-b1-cMp" id="gbh-OP-XxV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mY-Rt-fNq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

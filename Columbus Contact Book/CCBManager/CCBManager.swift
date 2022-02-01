@@ -16,4 +16,9 @@ public struct CCBManager{
         return ccbDataPersistence
     }
     
+    public func WeatherManager() -> WeatherManager {
+        let weatherManager = Columbus_Contact_Book.WeatherManager(client: self)
+        return weatherManager
+    }
+    
 }

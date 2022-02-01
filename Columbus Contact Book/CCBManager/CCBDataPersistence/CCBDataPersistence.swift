@@ -94,7 +94,7 @@ public struct CCBDataPersistence {
         return person
     }
     
-    public func updateContact(email: String, data: Dictionary<String, String>) -> NSManagedObject {
+    public func updateContact(email: String, data: ContactModel) -> Bool {
         
         var person: NSManagedObject = NSManagedObject()
         
@@ -108,22 +108,23 @@ public struct CCBDataPersistence {
             let result = try managedContext.fetch(fetchRequest)
             person = result[0] as! NSManagedObject
             
-            person.setValue(data["name"], forKey: "name")
-            person.setValue(data["email"], forKey: "email")
-            person.setValue(data["phone"], forKey: "phone")
-            person.setValue(data["address"], forKey: "address")
-            person.setValue(data["notes"], forKey: "notes")
+            person.setValue(data.name, forKey: "name")
+            person.setValue(data.email, forKey: "email")
+            person.setValue(data.phone, forKey: "phone")
+            person.setValue(data.address, forKey: "address")
+            person.setValue(data.notes, forKey: "notes")
 
             do{
                 try managedContext.save()
+                return true
             } catch let error as NSError {
                 print("Could not save. \(error), \(error.userInfo)")
+                return false
             }
         }catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
+            return false
         }
-        
-        return person
     }
     
     public func deleteContact(email: String) -> Bool {

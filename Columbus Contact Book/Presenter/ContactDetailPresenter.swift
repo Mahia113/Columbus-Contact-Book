@@ -39,6 +39,16 @@ class ContactDetailPresenter {
         contactDetailViewControllerDelegate?.contactEliminated(eliminated: eliminated)
     }
     
+    func goToHome(controller: UIViewController){
+        
+        let tempController = controller.presentingViewController
+        let homeViewController = self.storyBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
+
+        controller.dismiss(animated: true, completion: {
+            tempController?.present(homeViewController, animated: true, completion: nil)
+        })
+    }
+    
     func callNumber(number: String){
         
     }

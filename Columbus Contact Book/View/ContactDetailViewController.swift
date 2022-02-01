@@ -46,11 +46,11 @@ class ContactDetailViewController: UIViewController, ContactDetailViewController
     }
     
     @IBAction func deleteEvent(_ sender: Any) {
-        
+        contactDetailPresenter.deleteContact(contact: contact!)
     }
     
     func contactEliminated(eliminated: Bool) {
-        //self.dismiss(animated: true, completion: nil)
+        contactDetailPresenter.goToHome(controller: self)
     }
     
     func setValues(){

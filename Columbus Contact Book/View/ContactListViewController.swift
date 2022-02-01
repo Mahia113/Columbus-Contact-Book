@@ -12,10 +12,18 @@ class ContactListViewController: UIViewController, UICollectionViewDataSource, U
     private let reuseIdentifier = "contactListCell"
     var listContacts: [ContactModel] = []
     private let contactListPresenter = ContactListPresenter()
+    private let ccbManager: CCBManager = CCBManager()
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         contactListPresenter.setViewDelegate(contactListViewControllerDelegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        listContacts = ccbManager.CCBDataPersistence().getContacts()
+        collectionView.reloadData()
     }
     
     @IBAction func backEvent(_ sender: Any) {

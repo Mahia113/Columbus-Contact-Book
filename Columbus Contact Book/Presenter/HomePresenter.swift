@@ -15,7 +15,6 @@ class HomePresenter {
     
     weak private var homeViewControllerDelegate: HomeViewControllerDelegate?
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    private let ccbManager: CCBManager = CCBManager()
     
     init() {}
     
@@ -31,11 +30,6 @@ class HomePresenter {
     
     func goToGetContacts(controller: UIViewController) {
         let contactListViewController = storyBoard.instantiateViewController(withIdentifier: "contactListView") as! ContactListViewController
-        
-        let listContacts = ccbManager.CCBDataPersistence().getContacts()
-        
-        contactListViewController.listContacts = listContacts
-
         controller.present(contactListViewController, animated: true, completion: nil)
     }
     

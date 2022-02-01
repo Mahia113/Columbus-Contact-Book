@@ -28,6 +28,7 @@ class ContactDetailPresenter {
     }
     
     func goToEditContact(controller: UIViewController, contact: ContactModel){
+        
         let editContactViewController = storyBoard.instantiateViewController(withIdentifier: "editContact") as! EditContactViewController
         editContactViewController.contact = contact
         controller.present(editContactViewController, animated: true, completion: nil)

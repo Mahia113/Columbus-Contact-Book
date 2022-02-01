@@ -33,20 +33,13 @@ class EditContactPresenter {
     }
     
     func goToHome(controller: UIViewController){
-        print("goToHome")
         
-        let temController = controller.presentingViewController
-        
+        let tempController = controller.presentingViewController
+        let homeViewController = self.storyBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
+
         controller.dismiss(animated: true, completion: {
-            
-            let homeViewController = self.storyBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
-
-            temController?.present(homeViewController, animated: true, completion: nil)
+            tempController?.present(homeViewController, animated: true, completion: nil)
         })
-        
-        
-        
-
     }
     
 }

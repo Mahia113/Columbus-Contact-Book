@@ -25,14 +25,13 @@ class ContactDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         customContainerTop()
         customContainerBottom()
         setValues()
     }
     
     @IBAction func backEvent(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func callEvent(_ sender: Any) {
@@ -48,7 +47,13 @@ class ContactDetailViewController: UIViewController {
     }
     
     func setValues(){
-        
+        nameContactHeader.text = contact?.name
+        phoneContactHeader.text = contact?.phone
+        nameContact.text = contact?.name
+        phoneContact.text = contact?.phone
+        emailContact.text = contact?.email
+        addressContact.text = contact?.address
+        notesContact.text = contact?.notes
     }
     
     func customContainerTop(){

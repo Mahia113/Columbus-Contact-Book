@@ -11,6 +11,16 @@ class ContactDetailViewController: UIViewController {
     
     @IBOutlet weak var viewContainerTop: UIView!
     @IBOutlet weak var viewContainerBottom: UIView!
+    
+    @IBOutlet weak var nameContactHeader: UILabel!
+    @IBOutlet weak var phoneContactHeader: UILabel!
+    
+    @IBOutlet weak var nameContact: UILabel!
+    @IBOutlet weak var phoneContact: UILabel!
+    @IBOutlet weak var emailContact: UILabel!
+    @IBOutlet weak var addressContact: UILabel!
+    @IBOutlet weak var notesContact: UILabel!
+    
     var contact: ContactModel?
     
     override func viewDidLoad() {
@@ -18,8 +28,27 @@ class ContactDetailViewController: UIViewController {
         
         customContainerTop()
         customContainerBottom()
+        setValues()
+    }
+    
+    @IBAction func backEvent(_ sender: Any) {
         
-        print("contact: \(contact)")
+    }
+    
+    @IBAction func callEvent(_ sender: Any) {
+        
+    }
+    
+    @IBAction func editEvent(_ sender: Any) {
+        
+    }
+    
+    @IBAction func deleteEvent(_ sender: Any) {
+        
+    }
+    
+    func setValues(){
+        
     }
     
     func customContainerTop(){
